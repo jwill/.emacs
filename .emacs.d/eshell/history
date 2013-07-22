@@ -1,0 +1,106 @@
+t
+source ~/.bashrc
+groovysh
+cd ..
+ls
+cd ..
+cd ../..
+ls
+gradle jar
+gradle jar
+gradle jar
+gradle jar
+gradle jar
+java -jar build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+result too big
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+dhef
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+groovysh
+gradle jar
+:compileJava/home/james/Repos/AlgorithmPractice/UVaOnlineJudge/src/org/onlinejudge/uva/Main465.java:11: error: cannot find symbol
+gradle jar
+/home/james/Repos/AlgorithmPractice/UVaOnlineJudge/src/org/onlinejudge/uva/Main465.java:28: error: cannot find symbol
+/home/james/Repos/AlgorithmPractice/UVaOnlineJudge/src/org/onlinejudge/uva/Main465.java:28: error: cannot find symbol
+gradle jar
+gradle jar
+gradle jar
+	            ^
+	            ^
+gradle jar
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+300 + 3gr
+groovysh
+gradle jar
+gradle jar
+gradle jar
+gradle jar
+gradle jar
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+result too big
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+300 + 3
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+result too big
+gradle jar
+* Try:
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+300 + 3
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+result too big
+2000000000 * 2000000000
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+2345456654 * 11
+gradle jar
+2345456654 * 11
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+300 + 3
+gradle jar
+FAILURE: Build failed with an exception.
+gradle jar
+gradle jar
+clear
+cls
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+gradle jar
+	                                         ^
+gradle jar
+/home/james/Repos/AlgorithmPractice/UVaOnlineJudge/src/org/onlinejudge/uva/Main465.java:32: error: variable overflowTwo might not have been initialized
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
+result too big
+first number too big
+gradle jar
+gradle jar
+java -cp build/libs/UVaOnlineJudge.jar org.onlinejudge.uva.Main465
