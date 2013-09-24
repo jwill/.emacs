@@ -49,3 +49,6 @@
 
       (message "Words: %d. Chars: %d." wCnt charCnt)
       )))
+(require 'ox-md)
+(setq browse-url-browser-function 'browse-url-generic
+          browse-url-generic-program "chromium-browser")
