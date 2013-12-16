@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (tsdh-dark)))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(line-number-mode nil)
  '(semantic-mode t))
 (custom-set-faces
@@ -15,18 +15,15 @@
  ;; If there is more than one, they won't work right.
  )
 
-(require 'package)
-(add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-(package-initialize)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; active Babel languages
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((java . t)
    (python . t)
-	 (groovy . t)
    (js . t)
    ))
 (custom-set-variables
@@ -52,3 +49,22 @@
 (require 'ox-md)
 (setq browse-url-browser-function 'browse-url-generic
           browse-url-generic-program "chromium-browser")
+
+;; Eclim support
+(require 'eclim)
+(global-eclim-mode)
+
+(setq help-at-pt-display-when-idle t)
+(setq help-at-pt-timer-delay 0.1)
+(help-at-pt-set-timer)
+
+;; regular auto-complete initialization
+(require 'auto-complete-config)
+(ac-config-default)
+
+;; add the emacs-eclim source
+(require 'ac-emacs-eclim-source)
+(ac-emacs-eclim-config)
+
+;; Command-T like explorer
+(require 'lusty-explorer)
