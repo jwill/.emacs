@@ -7,3 +7,4 @@ auto-complete
 markdown-mode
 lusty-explorer
 magit
+sublime-themes

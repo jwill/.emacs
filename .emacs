@@ -15,23 +15,25 @@
  ;; If there is more than one, they won't work right.
  )
 (require 'package)
+(package-initialize)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-initialize)
+
 ;; active Babel languages
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((java . t)
-   (python . t)
    (ruby . t)
-   (sh . t)
+   (python . t)
+   (sh  . t)
    (js . t)
    ))
 (custom-set-variables
 	'(org-confirm-babel-evaluate nil))
 (add-to-list 'load-path "~/.emacs.d/")
-(setq org-list-allow-alphabetical t)
+(require 'todotxt)
+
 (defun count-region (beginning end)
   "Print number of words and chars in region."
   (interactive "r")
@@ -50,9 +52,10 @@
 (setq browse-url-browser-function 'browse-url-generic
           browse-url-generic-program "chromium-browser")
 
-;; regular auto-complete initialization
-(require 'auto-complete-config)
-(ac-config-default)
+(require 'ox-md)
+(setq help-at-pt-display-when-idle t)
+(setq help-at-pt-timer-delay 0.1)
+(help-at-pt-set-timer)
 
 ;; Command-T like explorer
 (when (require 'lusty-explorer nil 'noerror)
@@ -61,10 +64,5 @@
   (global-set-key (kbd "C-x C-f") 'lusty-file-explorer)
   (global-set-key (kbd "C-x b")   'lusty-buffer-explorer))
 
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
-(setq backup-directory-alist `(("." . "~/.saves")))
-
-(require 'ox-md)
-(require 'todotxt)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'mccarthy t)
