@@ -1,0 +1,57 @@
+** User Info
+#+BEGIN_SRC emacs-lisp
+(setq user-full-name "James Williams"
+      user-mail-address "james.l.williams@gmail.com")
+#+END_SRC
+
+** Setup ErgoEmacs
+Implements standard shortcuts for Emacs
+M-x is now M-a
+#+BEGIN_SRC emacs-lisp
+(require 'ergoemacs-mode)
+#+END_SRC
+
+** Setup Themes
+Install with `package-install sublime-themes
+#+BEGIN_SRC emacs-lisp
+(require 'sublime-themes)
+(load-theme 'granger t)
+#+END_SRC
+
+** Org-Babel
+Add support for programming languages that I use often to work in OrgBabel.
+#+BEGIN_SRC emacs-lisp :results raw
+;; active Babel languages
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((python . t)
+    (java . t)
+    (sh . t)
+    (js . t)))
+
+(require 'ob-groovy)
+#+END_SRC
+
+
+** Magit
+Git support `package-install magit`
+#+BEGIN_SRC emacs-lisp
+(require 'magit)
+#+END_SRC
+
+** Sane Defaults
+#+BEGIN_SRC emacs-lisp
+(setq c-basic-offset 4) ; Indent 4 chars
+(setq tab-width 4)       ; tabs are 4 chars wide
+
+;; Answering just 'y' or 'n' will do
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Keep all backup and auto-save files in one directory
+(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
+
+;; Shut up
+(setq visual-bell t)
+(setq inhibit-startup-message t)
+#+END_SRC
