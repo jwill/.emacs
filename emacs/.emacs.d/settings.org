@@ -12,7 +12,7 @@ M-x is now M-a
 #+END_SRC
 
 ** Setup Themes
-Install with `package-install sublime-themes
+Install with `package-install color-theme
 #+BEGIN_SRC emacs-lisp  
 (require 'color-theme)
 (color-theme-initialize)
