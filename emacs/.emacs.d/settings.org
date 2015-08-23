@@ -13,9 +13,10 @@ M-x is now M-a
 
 ** Setup Themes
 Install with `package-install sublime-themes
-#+BEGIN_SRC emacs-lisp
-(require 'sublime-themes)
-(load-theme 'granger t)
+#+BEGIN_SRC emacs-lisp  
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-jedit-grey) 
 #+END_SRC
 
 ** Org-Babel
