@@ -8,12 +8,12 @@
 Implements standard shortcuts for Emacs
 M-x is now M-a
 #+BEGIN_SRC emacs-lisp
-(require 'ergoemacs-mode)
+;(require 'ergoemacs-mode)
 #+END_SRC
 
 ** Setup Themes
-Install with `package-install color-theme
-#+BEGIN_SRC emacs-lisp  
+Install with `package-install color-themes
+#+BEGIN_SRC emacs-lisp
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-jedit-grey) 
@@ -30,14 +30,14 @@ Add support for programming languages that I use often to work in OrgBabel.
     (sh . t)
     (js . t)))
 
-(require 'ob-groovy)
+;(require 'ob-groovy)
 #+END_SRC
 
 
 ** Magit
 Git support `package-install magit`
 #+BEGIN_SRC emacs-lisp
-(require 'magit)
+;(require 'magit)
 #+END_SRC
 
 ** Sane Defaults
@@ -55,4 +55,21 @@ Git support `package-install magit`
 ;; Shut up
 (setq visual-bell t)
 (setq inhibit-startup-message t)
+#+END_SRC
+
+** Org-Capture
+#+BEGIN_SRC emacs-lisp
+(setq org-default-notes-file "~/Dropbox/Org/notes.org")
+(define-key global-map "\C-cc" 'org-capture)
+
+(setq org-capture-templates
+    `(("f" "food" entry (file+datetree "~/Dropbox/Org/foodlog.org")
+            (file "~/.emacs.d/orgtemplates/food.orgtpl"))
+	("t" "todo" entry (file "~/Downloads/notes.org")
+	    "* TODO %^{Task} %?")
+	("w" "water" entry (file+datetree "~/Dropbox/Org/foodlog.org")
+	    (file "~/.emacs.d/orgtemplates/water.orgtpl"))
+	("e" "exercise" entry (file+datetree "~/Dropbox/Org/foodlog.org")
+	    (file "~/.emacs.d/orgtemplates/workout.orgtpl"))
+))
 #+END_SRC
