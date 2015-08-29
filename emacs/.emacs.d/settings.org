@@ -62,11 +62,14 @@ Git support `package-install magit`
 (setq org-default-notes-file "~/Dropbox/Org/notes.org")
 (define-key global-map "\C-cc" 'org-capture)
 
+; Log done state in TODOs
+(setq org-log-done t)
+
 (setq org-capture-templates
     `(("f" "food" entry (file+datetree "~/Dropbox/Org/foodlog.org")
             (file "~/.emacs.d/orgtemplates/food.orgtpl"))
-	("t" "todo" entry (file "~/Dropbox/Org/notes.org")
-	    "* TODO %^{Task} %?")
+	("t" "todo" entry (file+headline "~/Dropbox/Org/notes.org" "Tasks")
+	    "** TODO %^{Task} %?")
 	("w" "water" entry (file+datetree "~/Dropbox/Org/foodlog.org")
 	    (file "~/.emacs.d/orgtemplates/water.orgtpl"))
 	("e" "exercise" entry (file+datetree "~/Dropbox/Org/foodlog.org")
