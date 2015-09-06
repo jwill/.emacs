@@ -1,8 +1,8 @@
 * %t Workout %^{Description}
-:PROPERTIES
-:START_TIME: %^{StartTime}
-:DURATION: %^{Duration}
-:DISTANCE: %^{Distance}
-:END:
-Notes:
-%?
+  :PROPERTIES
+  :START_TIME: %^{StartTime}
+  :DURATION: %^{Duration}
+  :DISTANCE: %^{Distance}
+  :END:
+  Notes:
+  %?
