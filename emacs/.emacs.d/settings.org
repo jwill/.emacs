@@ -74,5 +74,7 @@ Git support `package-install magit`
 	    (file "~/.emacs.d/orgtemplates/water.orgtpl"))
 	("e" "exercise" entry (file+datetree "~/Dropbox/Org/foodlog.org")
 	    (file "~/.emacs.d/orgtemplates/workout.orgtpl"))
+        ("l" "language" entry (file+datetree "~/Dropbox/Org/language_study.org")
+            (file "~/.emacs.d/orgtemplated/language.orgtpl"))
 ))
 #+END_SRC

@@ -1,0 +1,8 @@
+** %t Language Study
+   :PROPERTIES:
+   :LANGUAGE: %^{Spanish|French}
+   :START_TIME: %^{StartTime}
+   :DURATION: %^{Duration}
+   :END:
+   Notes:
+   %?
