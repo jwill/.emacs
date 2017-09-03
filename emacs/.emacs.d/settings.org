@@ -4,19 +4,25 @@
       user-mail-address "james.l.williams@gmail.com")
 #+END_SRC
 
-** Setup ErgoEmacs
-Implements standard shortcuts for Emacs
-M-x is now M-a
-#+BEGIN_SRC emacs-lisp
-;(require 'ergoemacs-mode)
-#+END_SRC
+
 
 ** Setup Themes
 Install with `package-install color-themes
 #+BEGIN_SRC emacs-lisp
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-jedit-grey) 
+; Load JEdit-Grey
+;(color-theme-jedit-grey) 
+
+;Load Leuven or Leuven Dark
+(load-theme 'leuven t)
+;(load-theme 'leuven-dark t)
+#+END_SRC
+
+** Neotree
+#+BEGIN_SRC emacs-lisp
+(require 'neotree)
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 #+END_SRC
 
 ** Org-Babel
@@ -27,10 +33,19 @@ Add support for programming languages that I use often to work in OrgBabel.
   'org-babel-load-languages
   '((python . t)
     (java . t)
-    (sh . t)
+    (shell . t)
+    (groovy . t)
     (js . t)))
 
-;(require 'ob-groovy)
+; For PlantUML diagrams
+; (add-to-list
+;  'org-src-lang-modes '("plantuml" . plantuml))
+
+#+END_SRC
+
+** PlantUML
+#+BEGIN_SRC emacs-lisp :results raw
+;(setq org-plantuml-jar-path (expand-file-name "/usr/share/plantuml/plantuml.jar"))
 #+END_SRC
 
 
@@ -65,16 +80,23 @@ Git support `package-install magit`
 ; Log done state in TODOs
 (setq org-log-done t)
 
-(setq org-capture-templates
-    `(("f" "food" entry (file+datetree "~/Dropbox/Org/foodlog.org")
-            (file "~/.emacs.d/orgtemplates/food.orgtpl"))
-	("t" "todo" entry (file+headline "~/Dropbox/Org/notes.org" "Tasks")
-	    "** TODO %^{Task} %?")
-	("w" "water" entry (file+datetree "~/Dropbox/Org/foodlog.org")
-	    (file "~/.emacs.d/orgtemplates/water.orgtpl"))
-	("e" "exercise" entry (file+datetree "~/Dropbox/Org/foodlog.org")
-	    (file "~/.emacs.d/orgtemplates/workout.orgtpl"))
-        ("l" "language" entry (file+datetree "~/Dropbox/Org/language_study.org")
-            (file "~/.emacs.d/orgtemplated/language.orgtpl"))
+; (setq org-capture-templates
+;    `(("f" "food" entry (file+datetree "~/Dropbox/Org/foodlog.org")
+;            (file "~/.emacs.d/orgtemplates/food.orgtpl"))
+;	("t" "todo" entry (file+headline "~/Dropbox/Org/notes.org" "Tasks")
+;	    "** TODO %^{Task} %?")
+;	("w" "water" entry (file+datetree "~/Dropbox/Org/foodlog.org")
+;	    (file "~/.emacs.d/orgtemplates/water.orgtpl"))
+;	("e" "exercise" entry (file+datetree "~/Dropbox/Org/foodlog.org")
+;	    (file "~/.emacs.d/orgtemplates/workout.orgtpl"))
+;        ("l" "language" entry (file+datetree "~/Dropbox/Org/language_study.org")
+;            (file "~/.emacs.d/orgtemplated/language.orgtpl"))
 ))
 #+END_SRC
+
+
+
+;(require 'ob-groovy)
+#+END_SRC
+
+
