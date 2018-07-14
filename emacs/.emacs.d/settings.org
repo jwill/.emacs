@@ -33,8 +33,8 @@ Add support for programming languages that I use often to work in OrgBabel.
   'org-babel-load-languages
   '((python . t)
     (java . t)
-    (shell . t)
-    (groovy . t)
+    (sh . t)
+   ; (groovy . t)
     (js . t)))
 
 ; For PlantUML diagrams
