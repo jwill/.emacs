@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+dart /usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot --lsp

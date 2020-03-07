@@ -1,0 +1,30 @@
+** Additional Packages
+#+BEGIN_SRC elisp
+   dotspacemacs-additional-packages '(jsonrpc
+                                      flymake
+                                      company
+                                      groovy-mode
+                                      gradle-mode
+                                      kotlin-mode
+                                      eglot
+                                      ob-kotlin)
+
+#+END_SRC
+
+** LSP Servers
+
+Flutter/Dart - Requires a working Dart SDK install
+
+Kotlin - Build with Gradle
+
+Groovy - Build with Gradle
+
+*Eglot* expects the executables to be on the PATH. kotlin-language-server and dart-language-server are automatically recognized.
+
+** User Config
+
+- Added triggers for Kotlin and Dart to auto-launch eglot, company-mode, and gradle-mode.
+- Added org-babel integration for Kotlin and Java.
+- Set Helm-dash to launch docs in Emacs' built-in browser.
+- Added function to do =gradle clean=.
+- Bound gradle functions to =SPC o g=. Only gradle clean and general gradle run tasks.
