@@ -52,6 +52,7 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
+
 (defun flutter-run ()
   (interactive)
   (shell-command "flutter")
@@ -94,3 +95,9 @@
 ;;     ("f" describe-function "function")
 ;;     ("v" describe-variable "variable")
 ;;     ("i" info-lookup-symbol "info lookup"))))
+
+(map! :map org-present-mode-keymap
+      :nv "[" #'org-present-prev
+      :nv "]" #'org-present-next)
+;;(define-key org-present-mode-keymap (kbd "H-p")         'org-present-next)
+;;(define-key org-present-mode-keymap (kbd "H-i")          'org-present-prev)

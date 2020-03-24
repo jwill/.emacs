@@ -56,3 +56,4 @@
 (package! ob-kotlin)
 (package! counsel-dash)
 (package! major-mode-hydra)
+(package! org-present)
